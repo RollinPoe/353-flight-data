@@ -39,7 +39,7 @@ flight_schema = types.StructType([
     types.StructField('day', types.DateType()),
     types.StructField('latitude_1', types.FloatType()),
     types.StructField('longitude_1', types.FloatType()),
-    types.StructField('altitude_1', types.FloatType()),    
+    types.StructField('altitude_1', types.FloatType()),
     types.StructField('latitude_2', types.FloatType()),
     types.StructField('longitude_2', types.FloatType()),
     types.StructField('altitude_2', types.FloatType()),
@@ -58,7 +58,7 @@ airport_schema = types.StructType([
     types.StructField('iso_region', types.StringType()),
     types.StructField('municipality', types.StringType()),
     types.StructField('scheduled_service', types.StringType()),
-    types.StructField('gps_code', types.StringType()),    
+    types.StructField('gps_code', types.StringType()),
     types.StructField('iata_code', types.StringType()),
     types.StructField('local_code', types.StringType()),
     types.StructField('home_link', types.StringType()),
@@ -91,25 +91,27 @@ def main(in_directory, out_directory):
     #Read in airport lookup table
     print("Airports")
     airports = spark.read.csv(in_airport, header=True, schema=airport_schema)
-    airports = airports.select("ident", "continent", "iso_country")
+    airports = airports.select("ident", "continent", "iso_country", "type")
 
     #Read in airline lookup table
     print("Airlines")
     airlines = spark.read.csv(in_airlines, schema=airline_schema)
     airlines = airlines.select("icao", "name")
-    
+
     #========== Joins ==========#
     #Get origin/destination country and region
     #Get airline name
     print("Joining")
     joined = dat.join(airports, on=(dat['origin'] == airports['ident']))
     joined = joined.withColumnRenamed("continent","origin_continent") \
-    .withColumnRenamed("iso_country","origin_country")
+    .withColumnRenamed("iso_country","origin_country") \
+    .withColumnRenamed("type","origin_type")
     joined = joined.drop("ident")
 
     joined = joined.join(airports, on=(dat['destination'] == airports['ident']))
     joined = joined.withColumnRenamed("continent","destination_continent") \
-    .withColumnRenamed("iso_country","destination_country")
+    .withColumnRenamed("iso_country","destination_country") \
+    .withColumnRenamed("type","origin_type")
     joined = joined.drop("ident")
 
     joined = joined.join(airlines, on="icao")
