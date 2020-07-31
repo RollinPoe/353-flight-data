@@ -1,0 +1,171 @@
+﻿typecode,aircraft_type,airliner_type,aircraft_category,payload
+333,,,,
+,,,,
+A124,Antonov An-124,Cargo,Heavy Transport,
+A20N,Airbus A320,Mid-Size Passenger Jet,Narrow-body,Passenger
+A21N,Airbus A320,Mid-Size Passenger Jet,Narrow-body,Passenger
+A306,Airbus A300,Mid-Size Passenger Jet,Narrow-body,Passenger
+A30B,Airbus A300,Mid-Size Passenger Jet,Narrow-body,Passenger
+A310,Airbus A310,Mid-Size Passenger Jet,Wide-body,Passenger
+A318,Airbus A310,Mid-Size Passenger Jet,Wide-body,Passenger
+A319,Airbus A310,Mid-Size Passenger Jet,Wide-body,Passenger
+A320,Airbus A320,Mid-Size Passenger Jet,Narrow-body,Passenger
+A321,Airbus A320,Mid-Size Passenger Jet,Narrow-body,Passenger
+A330,Airbus A330,Mid-Size Passenger Jet,Wide-body,Passenger
+A332,Airbus A330,Mid-Size Passenger Jet,Wide-body,Passenger
+A333,Airbus A330,Mid-Size Passenger Jet,Wide-body,Passenger
+A339,Airbus A330,Mid-Size Passenger Jet,Wide-body,Passenger
+A343,Airbus A340,Mid-Size Passenger Jet,Wide-body,Passenger
+A345,Airbus A340,Mid-Size Passenger Jet,Wide-body,Passenger
+A346,Airbus A340,Mid-Size Passenger Jet,Wide-body,Passenger
+A359,Airbus A350,Mid-Size Passenger Jet,Wide-body,Passenger
+A35K,Airbus A350,Mid-Size Passenger Jet,Wide-body,Passenger
+A388,Airbus A380,Jumbo Passenger Jet,Wide-body,Passenger
+A3ST,Airbus Beluga,Cargo,Heavy Transport,
+AC50,Aero Commander 500,Twin Turboprop,Turboprop,Passenger
+Airbus A320-214 (SL),Airbus A320,Mid-Size Passenger Jet,Narrow-body,Passenger
+AN32,Antonov An-32,Millitary Turboprop,Transport,
+AS32,Airbus Helicopters H215,Helicopter,Helicopter,
+AS50,Airbus Helicopters H125,Helicopter,Helicopter,
+AT43,ATR42,Passenger Turboprop,Turboprop,Passenger
+AT45,ATR42,Passenger Turboprop,Turboprop,Passenger
+AT46,ATR42,Passenger Turboprop,Turboprop,Passenger
+AT72,ATR42,Passenger Turboprop,Turboprop,Passenger
+AT73,ATR42,Passenger Turboprop,Turboprop,Passenger
+AT75,ATR42,Passenger Turboprop,Turboprop,Passenger
+AT76,ATR42,Passenger Turboprop,Turboprop,Passenger
+B190,Beechcraft 1900,Passenger Turboprop,Turboprop,Passenger
+B350,Beechcraft 200,Passenger Turboprop,Turboprop,Passenger
+B38M,Boeing 737,Mid-Size Passenger Jet,Narrow-body,Passenger
+B39M,Boeing 737,Mid-Size Passenger Jet,Narrow-body,Passenger
+B407,Bell 407,Helicopter,Helicopter,
+B412,Bell 412,Helicopter,Helicopter,
+B462,British Aerospace 146,Mid-Size Passenger Jet,Narrow-body,Passenger
+B712,Boeing 717,Light Passenger Jet,Narrow-body,Passenger
+B721,Boeing 727,Mid-Size Passenger Jet,Narrow-body,Passenger
+B732,Boeing 737,Mid-Size Passenger Jet,Narrow-body,Passenger
+B733,Boeing 737,Mid-Size Passenger Jet,Narrow-body,Passenger
+B734,Boeing 737,Mid-Size Passenger Jet,Narrow-body,Passenger
+B735,Boeing 737,Mid-Size Passenger Jet,Narrow-body,Passenger
+B736,Boeing 737,Mid-Size Passenger Jet,Narrow-body,Passenger
+B737,Boeing 737,Mid-Size Passenger Jet,Narrow-body,Passenger
+B738,Boeing 737,Mid-Size Passenger Jet,Narrow-body,Passenger
+B739,Boeing 737,Mid-Size Passenger Jet,Narrow-body,Passenger
+B744,Boeing 747,Jumbo Passenger Jet,Wide-body,Passenger
+B748,Boeing 747,Jumbo Passenger Jet,Wide-body,Passenger
+B752,Boeing 757,Mid-Size Passenger Jet,Narrow-body,Passenger
+B753,Boeing 757,Mid-Size Passenger Jet,Narrow-body,Passenger
+B762,Boeing 767,Mid-Size Passenger Jet,Wide-body,Passenger
+B763,Boeing 767,Mid-Size Passenger Jet,Wide-body,Passenger
+B764,Boeing 767,Mid-Size Passenger Jet,Wide-body,Passenger
+B772,Boeing 777,Mid-Size Passenger Jet,Wide-body,Passenger
+B773,Boeing 777,Mid-Size Passenger Jet,Wide-body,Passenger
+B77F,Boeing 777,Mid-Size Passenger Jet,Wide-body,Passenger
+B77L,Boeing 777,Mid-Size Passenger Jet,Wide-body,Passenger
+B77W,Boeing 777,Mid-Size Passenger Jet,Wide-body,Passenger
+B783,Boeing 787,Mid-Size Passenger Jet,Wide-body,Passenger
+B788,Boeing 787,Mid-Size Passenger Jet,Wide-body,Passenger
+B789,Boeing 787,Mid-Size Passenger Jet,Wide-body,Passenger
+B78X,Boeing 787,Mid-Size Passenger Jet,Wide-body,Passenger
+BALL,Balloon,Balloon,Ballon,
+BCS1,Airbuss A220,Light Passenger Jet,Narrow-body,Passenger
+BCS3,Airbuss A220,Light Passenger Jet,Narrow-body,Passenger
+BE20,Beechcraft 200,Passenger Turboprop,Turboprop,Passenger
+BE65,Beechcraft Queen Air,Twin Turboprop,Turboprop,Passenger
+BE99,Beechcraft Queen Air,Twin Turboprop,Turboprop,Passenger
+BLCF,Boeing Dreamlifter,Cargo,Heavy Transport,
+C130,Lockheed C130,Millitary Turboprop,Millitary Transport,
+C182,Cessna 182,Private Single Engine,Turboprop,Passenger
+C208,Cessna 208,Private Single Engine,Turboprop,Passenger
+C25A,Cessna CitationJet,Light Business Jet,Narrow-body,Passenger
+C25B,Cessna CitationJet,Light Business Jet,Narrow-body,Passenger
+C25C,Cessna CitationJet,Light Business Jet,Narrow-body,Passenger
+C402,Cessna 402,Twin Turboprop,Turboprop,Passenger
+C510,Cessna Citation Mustang,Very Light Jet,Narrow-body,Passenger
+C525,Cessna CitationJet,Light Business Jet,Narrow-body,Passenger
+C560,Cessna Citation V,Very Light Jet,Narrow-body,Passenger
+C56X,Cessna Citation V,Very Light Jet,Narrow-body,Passenger
+C680,Cessna Citation Sovereign,Mid-Size Business Jet,Narrow-body,Passenger
+C68A,Cessna Citation Sovereign,Mid-Size Business Jet,Narrow-body,Passenger
+C750,Cessna Citation X,Mid-Size Business Jet,Narrow-body,Passenger
+CL35,Bombardier Challenger 350,Mid-Size Business Jet,Narrow-body,Passenger
+CL60,Bombardier Challenger 600,Mid-Size Business Jet,Narrow-body,Passenger
+CL61,Bombardier Challenger 600,Mid-Size Business Jet,Narrow-body,Passenger
+CL64,Bombardier Challenger 600,Mid-Size Business Jet,Narrow-body,Passenger
+CL65,Bombardier Challenger 600,Mid-Size Business Jet,Narrow-body,Passenger
+CL85,Bombardier Challenger 850,Mid-Size Business Jet,Narrow-body,Passenger
+CRJ1,Bombardier CRJ100,Light Passenger Jet,Narrow-body,Passenger
+CRJ-1000,Bombardier CRJ100,Light Passenger Jet,Narrow-body,Passenger
+CRJ2,Bombardier CRJ200,Light Passenger Jet,Narrow-body,Passenger
+CRJ7,Bombardier CRJ700,Light Passenger Jet,Narrow-body,Passenger
+CRJ9,Bombardier CRJ700,Light Passenger Jet,Narrow-body,Passenger
+CRJX,Bombardier CRJ700,Light Passenger Jet,Narrow-body,Passenger
+D228,Dornier Do 228,Twin Turboprop,Turboprop,Passenger
+D328,Dornier 328,Twin Turboprop,Turboprop,Passenger
+DC10,McDonnell Douglas DC-10,Mid-Size Passenger Jet,Wide-body,Passenger
+DH8A,De Havilland Canada Dash 8,Passenger Turboprop,Turboprop,Passenger
+DH8B,De Havilland Canada Dash 8,Passenger Turboprop,Turboprop,Passenger
+DH8C,De Havilland Canada Dash 8,Passenger Turboprop,Turboprop,Passenger
+DH8D,De Havilland Canada Dash 8,Passenger Turboprop,Turboprop,Passenger
+DHC3,De Havilland Canada DHC-3 Otter,Private Single Engine,Turboprop,Passenger
+DHC6,De Havilland Canada DHC-3 Twin Otter,Twin Turboprop,Turboprop,Passenger
+DISC,Disc,Disc,Disc,
+E120,Embraer EMB 120,Twin Turboprop,Turboprop,Passenger
+E135,Embraer ERJ,Light Passenger Jet,Narrow-body,Passenger
+E140,Embraer ERJ,Light Passenger Jet,Narrow-body,Passenger
+E145,Embraer ERJ,Light Passenger Jet,Narrow-body,Passenger
+E170,Embraer E-Jet,Mid-Size Passenger Jet,Narrow-body,Passenger
+E190,Embraer E-Jet,Mid-Size Passenger Jet,Narrow-body,Passenger
+E195,Embraer E-Jet,Mid-Size Passenger Jet,Narrow-body,Passenger
+E290,Embraer E-Jet,Mid-Size Passenger Jet,Narrow-body,Passenger
+E295,Embraer E-Jet,Mid-Size Passenger Jet,Narrow-body,Passenger
+E35L,Embraer ERJ,Light Passenger Jet,Narrow-body,Passenger
+E45X,Embraer ERJ,Light Passenger Jet,Narrow-body,Passenger
+E50P,Embraer Phenom 100,Very Light Jet,Narrow-body,Passenger
+E55P,Embraer Phenom 300,Light Business Jet,Narrow-body,Passenger
+E75L,Embraer E-Jet,Mid-Size Passenger Jet,Narrow-body,Passenger
+E75S,Embraer E-Jet,Mid-Size Passenger Jet,Narrow-body,Passenger
+EVSS,Evektor SportStar,Private Single Engine,Turboprop,Passenger
+F100,Fokker 100,Light Passenger Jet,Narrow-body,Passenger
+F2LX,Dassault Falcon 2000,Light Business Jet,Narrow-body,Passenger
+F2TS,Dassault Falcon 2000,Light Business Jet,Narrow-body,Passenger
+F50,Fokker 50,Passenger Turboprop,Turboprop,Passenger
+F70,Fokker 70,Light Passenger Jet,Narrow-body,Passenger
+F9EX,Dassault Falcon 900,Light Business Jet,Narrow-body,Passenger
+FA20,Dassault Falcon 20,Light Business Jet,Narrow-body,Passenger
+FA7X,Dassault Falcon 900,Light Business Jet,Narrow-body,Passenger
+FA8X,Dassault Falcon 900,Light Business Jet,Narrow-body,Passenger
+G450,Gulfstream IV,Light Business Jet,Narrow-body,Passenger
+G650,Gulfstream G650,Light Business Jet,Narrow-body,Passenger
+GL5T,Bombardier Global Express,Light Business Jet,Narrow-body,Passenger
+GL6T,Bombardier Global Express,Light Business Jet,Narrow-body,Passenger
+GLEX,Bombardier Global Express,Light Business Jet,Narrow-body,Passenger
+GLF3,Gulfstream III,Light Business Jet,Narrow-body,Passenger
+GLF4,Gulfstream IV,Light Business Jet,Narrow-body,Passenger
+GLF5,Gulfstream V,Light Business Jet,Narrow-body,Passenger
+H500,Hughes McDonnell Douglas MD Helicopters 500,Helicopter,Helicopter,
+H900,Hughes McDonnell Douglas MD Helicopters 900,Helicopter,Helicopter,
+HA4T,Hawker 4000,Light Business Jet,Narrow-body,Passenger
+IL76,Ilyushin Il-76,Millitary Turboprop,Transport,
+J328,Fairchild Dornier 328JET,Light Passenger Jet,Narrow-body,Passenger
+LJ35,Learjet 35,Light Business Jet,Narrow-body,Passenger
+LJ36,Learjet 35,Light Business Jet,Narrow-body,Passenger
+LJ45,Learjet 45,Light Business Jet,Narrow-body,Passenger
+LJ55,Learjet 55,Light Business Jet,Narrow-body,Passenger
+LJ60,Learjet 60,Light Business Jet,Narrow-body,Passenger
+MD11,McDonnell Douglas MD-11,Mid-Size Passenger Jet,Wide-body,Passenger
+MD82,McDonnell Douglas MD-80,Mid-Size Passenger Jet,Narrow-body,Passenger
+MD88,McDonnell Douglas MD-80,Mid-Size Passenger Jet,Narrow-body,Passenger
+MD90,McDonnell Douglas MD-90,Mid-Size Passenger Jet,Narrow-body,Passenger
+P46T,Piper PA-46,Private Single Engine,Turboprop,Passenger
+P51,North American P-51 Mustang,Private Single Engine,Turboprop,
+PA46,Piper PA-46,Private Single Engine,Turboprop,Passenger
+PC12,Pilatus PC-12,Private Single Engine,Turboprop,Passenger
+PRM1,Raytheon 390 Premier 1,Very Light Jet,Narrow-body,Passenger
+RJ1H,Bae Systems AVRO RJ-100,Mid-Size Passenger Jet,Narrow-body,Passenger
+RJ85,British Aerospace 146,Mid-Size Passenger Jet,Narrow-body,Passenger
+S92,Sikorsky S-92,Helicopter,Helicopter,
+SF34,Saab 340,Twin Turboprop,Turboprop,Passenger
+SH36,Short 360,Twin Turboprop,Turboprop,Passenger
+SU95,Sukhoi Superjet 100,Mid-Size Passenger Jet,Narrow-body,Passenger
+SW4,Fairchild Swearingen Metroliner,Twin Turboprop,Turboprop,Passenger
