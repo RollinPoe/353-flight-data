@@ -5,9 +5,9 @@ Purpose: Take data from OpenSky dataset clean, reduce, and join then save to par
 
 Inputs: data directory, airport lookup csv, airline lookup csv, output directory
 Outputs: parquet files continaing
-+--------+----+------------+--------+------+----------------+--------------+-----------+---------------------+-------------------+---+
-|callsign|icao|airline_name|typecode|origin|origin_continent|origin_country|destination|destination_continent|destination_country|day|
-+--------+----+------------+--------+------+----------------+--------------+-----------+---------------------+-------------------+---+
++--------+----+------------+-------------+-------------+-----------------+------+-------------------+----------------+--------------+-----------+-------------------------+---------------------+-------------------+---+
+|callsign|icao|airline_name|aircraft_type|airliner_type|aircraft_category|origin|origin_airport_type|origin_continent|origin_country|destination|desitination_airport_type|destination_continent|destination_country|day|
++--------+----+------------+-------------+-------------+-----------------+------+-------------------+----------------+--------------+-----------+-------------------------+---------------------+-------------------+---+
 
 Example call: spark-submit 01_flight_etl.py input_data airports.csv airlines.csv output
 
@@ -20,7 +20,7 @@ Verified:
 import sys
 from pyspark.sql import SparkSession, functions, types
 
-spark = SparkSession.builder.appName('opensky clean').getOrCreate()
+spark = SparkSession.builder.appName('Flight Data ETL').getOrCreate()
 spark.sparkContext.setLogLevel('WARN')
 
 assert sys.version_info >= (3, 5) # make sure we have Python 3.5+
@@ -65,7 +65,6 @@ airport_schema = types.StructType([
     types.StructField('wikipedia_link', types.StringType()),
     types.StructField('keywords', types.StringType()),
 ])
-#
 
 airline_schema = types.StructType([
     types.StructField('of_airline_id', types.IntegerType()),
@@ -140,8 +139,7 @@ def main(in_directory, out_directory):
 
     #Rearrange columns
     joined = joined.select("callsign", "icao", "airline_name", "aircraft_type", "airliner_type", "aircraft_category", "origin", "origin_airport_type", "origin_continent", "origin_country", "destination", "desitination_airport_type", "destination_continent", "destination_country", "day")
-    # print("Joined")
-    joined.show()
+    # joined.show()
     
     # Used to generate list of unique aircraft for later analysis.
     # You shouldn't need to uncomment unless you want to check aircraft.csv    
@@ -149,8 +147,8 @@ def main(in_directory, out_directory):
     # unique = joined.select("typecode").distinct()
     # unique.write.csv("unique.csv", mode='overwrite')
 
-    # print("Writing")
-    # joined.write.parquet(out_directory, mode='overwrite')
+    print("Writing")
+    joined.write.parquet(out_directory, mode='overwrite')
 
 if __name__=='__main__':
     in_directory = sys.argv[1]
