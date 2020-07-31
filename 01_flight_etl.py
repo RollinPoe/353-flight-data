@@ -79,6 +79,14 @@ airline_schema = types.StructType([
 ])
 #324,"All Nippon Airways","ANA All Nippon Airways","NH","ANA","ALL NIPPON","Japan","Y"
 
+aircraft_schema = types.StructType([
+    types.StructField('typecode', types.StringType()),
+    types.StructField('aircraft_type', types.StringType()),
+    types.StructField('airliner_type', types.StringType()),
+    types.StructField('aircraft_category', types.StringType()),
+    types.StructField('payload', types.StringType()),
+])
+
 def main(in_directory, out_directory):
     #Read in data file, keep flight number, aircraft type, origin, destination, date
     #Add airline icao for later join
@@ -91,41 +99,63 @@ def main(in_directory, out_directory):
     #Read in airport lookup table
     print("Airports")
     airports = spark.read.csv(in_airport, header=True, schema=airport_schema)
-    airports = airports.select("ident", "continent", "iso_country")
+    airports = airports.select("ident", "type", "continent", "iso_country")
 
     #Read in airline lookup table
     print("Airlines")
     airlines = spark.read.csv(in_airlines, schema=airline_schema)
     airlines = airlines.select("icao", "name")
+
+    #Read in airline lookup table
+    print("Airlines")
+    aircraft = spark.read.csv(in_aircraft, schema=aircraft_schema)
     
     #========== Joins ==========#
     #Get origin/destination country and region
     #Get airline name
     print("Joining")
+    #Origin Airport
     joined = dat.join(airports, on=(dat['origin'] == airports['ident']))
     joined = joined.withColumnRenamed("continent","origin_continent") \
-    .withColumnRenamed("iso_country","origin_country")
+    .withColumnRenamed("iso_country","origin_country") \
+    .withColumnRenamed("type", "origin_airport_type")
     joined = joined.drop("ident")
 
+    #Destination Airport
     joined = joined.join(airports, on=(dat['destination'] == airports['ident']))
     joined = joined.withColumnRenamed("continent","destination_continent") \
-    .withColumnRenamed("iso_country","destination_country")
+    .withColumnRenamed("iso_country","destination_country") \
+    .withColumnRenamed("type", "desitination_airport_type")
     joined = joined.drop("ident")
 
+    #Airline Names
     joined = joined.join(airlines, on="icao")
     joined = joined.withColumnRenamed("name", "airline_name")
 
-    #Rearrange columns
-    joined = joined.select("callsign", "icao", "airline_name", "typecode", "origin", "origin_continent", "origin_country", "destination", "destination_continent", "destination_country", "day")
-    # print("Joined")
-    # joined.show()
+    #Aircraft Info
+    joined = joined.join(aircraft, on="typecode")
+    joined = joined.drop("typecode")
 
-    print("Writing")
-    joined.write.parquet(out_directory, mode='overwrite')
+    joined = joined.na.drop()
+
+    #Rearrange columns
+    joined = joined.select("callsign", "icao", "airline_name", "aircraft_type", "airliner_type", "aircraft_category", "origin", "origin_airport_type", "origin_continent", "origin_country", "destination", "desitination_airport_type", "destination_continent", "destination_country", "day")
+    # print("Joined")
+    joined.show()
+    
+    # Used to generate list of unique aircraft for later analysis.
+    # You shouldn't need to uncomment unless you want to check aircraft.csv    
+    # print("Unique")
+    # unique = joined.select("typecode").distinct()
+    # unique.write.csv("unique.csv", mode='overwrite')
+
+    # print("Writing")
+    # joined.write.parquet(out_directory, mode='overwrite')
 
 if __name__=='__main__':
     in_directory = sys.argv[1]
     in_airport = sys.argv[2]
     in_airlines = sys.argv[3]
-    out_directory = sys.argv[4]
+    in_aircraft = sys.argv[4]
+    out_directory = sys.argv[5]
     main(in_directory, out_directory)
