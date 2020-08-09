@@ -149,7 +149,6 @@ def main(in_directory, out_directory):
     # unique.write.csv("unique.csv", mode='overwrite')
 
     print("Writing")
-    joined.show()
     joined.write.parquet(out_directory, mode='overwrite')
 
 if __name__=='__main__':
