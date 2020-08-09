@@ -94,26 +94,22 @@ def main(in_directory, out_directory):
     dat = dat.select("callsign", "typecode", "origin", "destination", "day")
     dat = dat.na.drop()
     dat = dat.withColumn("icao", dat.callsign.substr(1,3))
-    dat.show()
 
     #Read in airport lookup table
     print("Airports")
     airports = spark.read.csv(in_airport, header=True, schema=airport_schema)
     airports = airports.select("ident", "continent", "iso_country", "type")
-    airports.show()
 
     #Read in airline lookup table
     print("Airlines")
     airlines = spark.read.csv(in_airlines, schema=airline_schema)
     airlines = airlines.select("icao", "name")
-    airlines.show()
 	
 	
 	#Read in aircraft lookup table
     print("Aircrafts")
     aircraft = spark.read.csv(in_aircraft, schema=aircraft_schema)
     aircraft = aircraft.select("typecode", "aircraft_type", "airliner_type", "aircraft_category")
-    aircraft.show()
 
     #========== Joins ==========#
     #Get origin/destination country and region
@@ -123,7 +119,7 @@ def main(in_directory, out_directory):
     joined = dat.join(airports, on=(dat['origin'] == airports['ident']))
     joined = joined.withColumnRenamed("continent","origin_continent") \
     .withColumnRenamed("iso_country","origin_country") \
-    .withColumnRenamed("type","origin_type")
+    .withColumnRenamed("type","origin_airport_type")
     joined = joined.drop("ident")
 	
 
@@ -131,7 +127,7 @@ def main(in_directory, out_directory):
     joined = joined.join(airports, on=(dat['destination'] == airports['ident']))
     joined = joined.withColumnRenamed("continent","destination_continent") \
     .withColumnRenamed("iso_country","destination_country") \
-    .withColumnRenamed("type","origin_type")
+    .withColumnRenamed("type","desitination_airport_type")
     joined = joined.drop("ident")
 
     #Airline Names
@@ -141,12 +137,10 @@ def main(in_directory, out_directory):
     #Aircraft Info
     joined = joined.join(aircraft, on="typecode")
     joined = joined.drop("typecode")
-
     #joined = joined.na.drop()
 
     #Rearrange columns
     joined = joined.select("callsign", "icao", "airline_name", "aircraft_type", "airliner_type", "aircraft_category", "origin", "origin_airport_type", "origin_continent", "origin_country", "destination", "desitination_airport_type", "destination_continent", "destination_country", "day")
-    # joined.show()
 
     # Used to generate list of unique aircraft for later analysis.
     # You shouldn't need to uncomment unless you want to check aircraft.csv
@@ -155,6 +149,7 @@ def main(in_directory, out_directory):
     # unique.write.csv("unique.csv", mode='overwrite')
 
     print("Writing")
+    joined.show()
     joined.write.parquet(out_directory, mode='overwrite')
 
 if __name__=='__main__':
